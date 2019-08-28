@@ -1,4 +1,12 @@
 # Point clouds from CNN depth regression vs. SLAM
+
+<figure>
+ <img src="https://github.com/m0oz/depth_learner/blob/master/figures/uvd-DepthPredictions-10.jpg" width="500"/>
+ <figcaption>
+ Results images - Input RGB on the left, groundtruth depth and predictions on the right.
+ </figcaption>
+</figure>
+
 This repository contains code for three different tasks
 ### 1. Trainable CNN for monocular depth prediction
 A tensorflow model that is based on [rpg_learning_base](https://github.com/uzh-rpg/rpg_learning_base) skeleton.
@@ -8,6 +16,14 @@ It provides a network architecture as proposed by [Eigen](https://arxiv.org/abs/
 * [UVD](http://www.sira.diei.unipg.it/supplementary/ral2016/extra.html) (45k frames, RGBD, synthetic, indoor (city scape), 20 video sequences)
 * [Unreal](https://isar.unipg.it/index.php?option=com_content&view=article&id=53:unrealdataset&catid=17&Itemid=212) (100k frames, RGBD, synthetic, outdoor (forest and city scape), video sequences)
 * [SceneNet](https://robotvault.bitbucket.io/scenenet-rgbd.html) (5M frames, RGBD, synthetic, indoor, video sequence)
+
+<figure>
+ <img src="https://github.com/m0oz/depth_learner/blob/master/figures/resnet50_architecture.jpg" width="500"/>
+ <figcaption>
+ CNN architecture
+ </figcaption>
+</figure>
+
 ### 2. ROS package for online inference of depth maps
 ROS node to load tensorflow model from checkpoint file and publish depth predictions for rgb images subsribed from a ROS topic.
 ### 3. ROS package to sample images, generate point clouds from depth images and evaluate point cloud quality
