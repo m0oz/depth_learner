@@ -1,0 +1,12 @@
+tensorflow-gpu==1.8
+numpy==1.14.3
+empy==3.3.2
+catkin_pkg==0.4.2
+rospkg==1.1.4
+python-gflags==3.1
+opencv-python==3.4.1.15
+pyyaml
+keras
+ipykernel
+jupyter
+matplotlib

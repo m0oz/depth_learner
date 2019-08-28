@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>online_inference</name>
+  <version>0.0.1</version>
+  <description>Infer depth maps using a Convolutional Neurel Network</description>
+
+  <maintainer email="zimoritz@student.ethz.ch">Moritz Zimmermann</maintainer>
+
+  <license>BSD</license>
+
+  <buildtool_depend>catkin_simple</buildtool_depend>
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>roscpp</depend>
+  <depend>rospy</depend>
+  <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>point_cloud_utils</depend>
+  <depend>depth_learner</depend>
+
+</package>

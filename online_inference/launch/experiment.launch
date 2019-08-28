@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<launch>
+
+  <node pkg="online_inference" type="online_inference.py" 
+        name="online_inference" output="screen">
+    <rosparam command="load" 
+        file="$(find depth_learner)/src/depth_learner/configs/resnet.yaml"/>
+    <!--
+    Update this with the path to the model you want to use for inference!! 
+    -->
+    <param name="inference_model" 
+        value="$(find depth_learner)/src/depth_learner/experiments/resnet50_0306" />
+  </node>
+  <node pkg="point_cloud_utils" type="generate_point_cloud" 
+        name="generate_point_cloud" output="screen">
+    <param name="fov_v" value="90" />
+    <param name="fov_h" value="106.26" />
+  </node>
+  <node pkg="point_cloud_utils" type="sample_img_dir" 
+        name="sample_img_dir" output="screen">
+
+    <!--
+    Update these with the path to your rgb and ground truth depth images!
+    Dow not forget a trainling slash
+    -->
+    <param name="rgb_dir" 
+        value="$(find depth_learner)/src/depth_learner/data/uvd/test/09/Images/" />
+    <param name="depth_dir" 
+        value="$(find depth_learner)/src/depth_learner/data/uvd/test/09/DepthSR/" />
+
+    <param name="rgb_format" value=".png" />
+    <param name="depth_format" value=".png" />
+    <param name="sampling_rate" value="2" />
+    <param name="init_framecount" value="1" />
+  </node>
+
+</launch>

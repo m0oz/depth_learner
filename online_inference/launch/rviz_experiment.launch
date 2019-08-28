@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<launch>
+
+  <node pkg="online_inference" type="online_inference.py" 
+        name="online_inference" output="log">
+    <rosparam command="load" 
+        file="$(find depth_learner)/src/depth_learner/configs/resnet.yaml"/>
+    <param name="inference_model" 
+        value="$(find depth_learner)/src/depth_learner/tests_uvd/resnet50_2705/" />
+  </node>
+
+  <node pkg="point_cloud_utils" type="generate_point_cloud" 
+        name="generate_point_cloud" output="screen">
+    <param name="fov_v" value="60" />
+    <param name="fov_h" value="70.84" />
+  </node>
+
+  <node pkg="point_cloud_utils" type="sample_img_dir" 
+        name="sample_img_dir" output="screen">
+    <param name="rgb_dir" 
+        value="$(find depth_learner)/src/depth_learner/data/uvd/rgb_ros/" />
+    <param name="depth_dir" 
+        value="$(find depth_learner)/src/depth_learner/data/uvd/depth_ros/" />
+    <param name="rgb_format" value=".png" />
+    <param name="depth_format" value=".png" />
+    <param name="sampling_rate" value="1" />
+  </node>
+
+  <node pkg="rviz" type="rviz" name="rviz_pcl"
+        args="-d $(find online_inference)/launch/rviz_config.rviz"/>
+
+</launch>

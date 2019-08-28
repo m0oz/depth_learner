@@ -1,0 +1,23 @@
+ds: 'uvd'
+model_name: 'eigen'
+
+# Training parameters
+log_dir: './tests_uvd/'
+train_dir: './data/uvd/train'
+val_dir: './data/uvd/val'
+input_width: 304
+input_height: 228
+output_width: 74
+output_height: 55
+switching_epoch: 50
+max_epochs: 100
+resume_weights: './tests_uvd/eigen_2805'
+# Optimizer parameters
+learning_rate_coarse: 0.0001
+learning_rate_fine: 0.001
+l2_reg_scale: 0.00001
+beta1: 0.9
+
+# Testing parameters
+checkpoint_dir: './tests_uvd/eigen_2805/'
+test_dir: './data/uvd/test'

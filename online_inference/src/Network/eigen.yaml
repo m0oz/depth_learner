@@ -1,0 +1,16 @@
+model_name: 'eigen'
+input_width: 304
+input_height: 228
+output_width: 74
+output_height: 55
+max_depth: 25.0
+learning_rate_coarse: 0.001
+learning_rate_fine: 0.001
+l2_reg_scale: 0.0001
+beta1: 0.9
+switching_epoch: 100
+ds: 'nyu'
+train_dir: './data/nyu/train'
+val_dir: './data/nyu/val'
+checkpoint_dir: './tests_nyu/name_xy'
+log_dir: './tests_nyu/'

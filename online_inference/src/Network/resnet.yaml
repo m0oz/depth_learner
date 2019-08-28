@@ -1,0 +1,8 @@
+model_name: 'resnet'
+input_width: 320
+input_height: 256
+output_width: 320
+output_height: 256
+ds: 'unreal'
+checkpoint_dir: './tests_unreal/'
+test_dir: './data/unreal/val'

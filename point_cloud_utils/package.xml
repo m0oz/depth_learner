@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>point_cloud_utils</name>
+  <version>0.0.0</version>
+  <description>point_cloud_utils</description>
+
+  <maintainer email="zimoritz@ethz.ch">Moritz Zimmermann</maintainer>
+  <license>BDS</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <buildtool_depend>catkin_simple</buildtool_depend>
+  <build_depend>message_generation</build_depend>
+
+  <exec_depend>message_runtime</exec_depend>
+
+  <depend>image_transport</depend>
+
+  <depend>pcl_conversions</depend>
+  <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>pcl_ros</depend>
+  <depend>cv_bridge</depend>
+  <depend>roscpp</depend>
+</package>
