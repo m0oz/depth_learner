@@ -9,8 +9,9 @@
 
 This repository contains code for three different tasks
 ### 1. Trainable CNN for monocular depth prediction
-A tensorflow model that is based on [rpg_learning_base](https://github.com/uzh-rpg/rpg_learning_base) skeleton.
-It provides a network architecture as proposed by [Eigen](https://arxiv.org/abs/1406.2283) and all necessary code to train and predict depth images from monocular rgb image input. Compatible datasets:
+A tensorflow model to predict depth maps from single RGB images.
+The network architecture is depicted below. As reference we also implemented the model as proposed by [Eigen](https://arxiv.org/abs/1406.2283).
+Compatible datasets:
 * [NYU](https://cs.nyu.edu/~silberman/datasets/) (2.4k frames, RGBD, Kinect, idoor scenery, single frames)
 * [SUNRGBD](http://rgbd.cs.princeton.edu/) (10k framess, RGBD, Kinect, indoor, single frames)
 * [UVD](http://www.sira.diei.unipg.it/supplementary/ral2016/extra.html) (45k frames, RGBD, synthetic, indoor (city scape), 20 video sequences)
