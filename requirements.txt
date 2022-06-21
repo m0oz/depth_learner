@@ -1,5 +1,5 @@
 tensorflow-gpu==1.15.0
-numpy==1.14.3
+numpy==1.22.0
 empy==3.3.2
 catkin_pkg==0.4.2
 rospkg==1.1.4
